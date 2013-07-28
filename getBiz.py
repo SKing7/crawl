@@ -83,6 +83,7 @@ else:
     
 start = 0
 all_data = []
+n = net.Net()
 while True:
     find_place = find_city + "," + find_loc
     data = { 
@@ -94,7 +95,6 @@ while True:
     }
     url = 'http://www.yelp.com/search?'
     url += urllib.urlencode(data)
-    n = net.Net()
     str = n.get(url)
     args = extract_args(str, find_city, find_loc, cflt)
     count = len(args)
