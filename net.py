@@ -34,3 +34,7 @@ class Net(object):
         for cookie in self.cookie:
             if cookie.name == name:
                 return cookie.value
+    def clear_cookie(self):
+        for cookie in self.cookie:
+            print cookie.value
+            cookie.value="";
